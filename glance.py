@@ -30,6 +30,8 @@ def glance(area, video):
             cap.set(cv2.CAP_PROP_POS_FRAMES, pos)
 
         ret, img = cap.read()
+        if ret is False:
+                break
 
         if loop_flag % 25 == 0:
             if ret:
@@ -51,13 +53,13 @@ def glance(area, video):
                     frames_bar[loop_flag] = 1
             else:
                 cap.release()
-                cv2.destroyAllWindows()
                 break
             last_rate = rate
         elif loop_flag == frames:
             break
         else:
             pass
+    return frames_bar
 
 
 if __name__ == '__main__':
