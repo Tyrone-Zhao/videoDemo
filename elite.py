@@ -24,7 +24,7 @@ def elite(path, quantity, interval, areas, start_time, save_path):
 if __name__ == "__main__":
     # args
     parser = argparse.ArgumentParser(description='arguments of target video')
-    parser.add_argument('--inside_path', type=str, default='../video/石门坎站（7.11）0-4点.avi')
+    parser.add_argument('--inside_path', type=str, default='/User/zjy/video/石门坎站（7.11）0-4点.avi')
     parser.add_argument('--quantity', type=int, default=2)
     parser.add_argument('--interval', type=int, default=5 * 60)
     parser.add_argument('--start_time', type=list, default=[2018, 7, 11, 0, 0, 0])
