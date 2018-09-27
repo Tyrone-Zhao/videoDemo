@@ -50,12 +50,14 @@ def sleep(path, cord_list, interval, start_time, filename):
                 if frame_cnt - latest_frm > interval * fps:
                     sleep_result.append((int(latest_frm/fps/60), int(frame_cnt/fps/60)))
                 latest_frm = frame_cnt
-    with open(filename, 'w') as f:
-        f.write(str(sleep_result))
+        cv2.imshow('winname', dilated)
+        cv2.waitKey(1)
+    # with open(filename, 'w') as f:
+    #     f.write(str(sleep_result))
 
 
 
-# bbox = (196, 186, 132, 167)
-# video = './关寨站（7.2）16-20点.avi'
-# staaaa = [2018, 7, 2, 16, 0, 12]
-# sleep(video, bbox, 7500, staaaa)
+bbox = (206, 193, 117, 174)
+video = '/Users/zjy/video/石门坎站（7.11）0-4点.avi'
+staaaa = [2018, 7, 2, 16, 0, 12]
+sleep(video, bbox, 300, staaaa, '')
