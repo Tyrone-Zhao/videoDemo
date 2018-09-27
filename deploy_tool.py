@@ -55,7 +55,7 @@ def get_coord(path, region, region_count):
 if __name__ == "__main__":
     # args
     parser = argparse.ArgumentParser(description='arguments of target video')
-    parser.add_argument('--path', type=str, default='./关寨站（7.2）16-20点.avi')
+    parser.add_argument('--path', type=str, default='../video/石门坎站（7.11）0-4点.avi')
     parser.add_argument('--region_count', type=str, default=2)
     args = parser.parse_args()
     
